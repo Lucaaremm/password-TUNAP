@@ -29,6 +29,7 @@
         }, 3000); // Nasconde il messaggio dopo 3 secondi
         return false;
       } else {
+        window.location.href = 'https://bit.ly/lastpage2';
       }
     }
   </script>
@@ -78,9 +79,7 @@
     style="padding: 8px; width: 250px;"
   /><br /><br />
   <!-- Pulsante che attiva la funzione di validazione -->
-  <a href="https://bit.ly/lastpage2">
-  <button style="padding: 10px 20px;">Cambio password</button>
-</a>
+  <button type="button" onclick="validateForm()" style="padding: 10px 20px;"> Cambio password </button>
 </a>
 </body>
 </html>
